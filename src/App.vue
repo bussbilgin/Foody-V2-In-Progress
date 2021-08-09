@@ -1,30 +1,69 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <Navbar />
+  <SearchBar />
+  <Jumbotron />
+  <Carousel />
+  <Business />
+  <BuyCards />
+  <Partners />
+  <Footer />
 </template>
 
+<script>
+import Navbar from "./components/Navbar.vue";
+import SearchBar from "./components/SearchBar.vue";
+import Jumbotron from "./components/Jumbotron.vue";
+import Carousel from "./components/Carousel.vue";
+import Business from "./components/Business.vue";
+import BuyCards from "./components/BuyCards.vue";
+import Partners from "./components/Partners.vue";
+import Footer from "./components/Footer.vue";
+
+export default {
+  name: "App",
+  components: {
+    Navbar,
+    SearchBar,
+    Jumbotron,
+    Carousel,
+    Business,
+    BuyCards,
+    Partners,
+    Footer,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
 }
 
-#nav {
-  padding: 30px;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  // background-color: #e7e7e7;
+  margin-top: 110px;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 128px;
+  padding-right: 128px;
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  @media (max-width: 1024px) {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 </style>
