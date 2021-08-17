@@ -55,12 +55,30 @@ export default {
     align-items: center;
     background-color: #ffffff;
 
+    @media (max-width: 1024px) {
+      width: 250px;
+      height: 250px;
+    }
+
+    @media (max-width: 767px) {
+      width: 150px;
+      height: 200px;
+    }
+
     &__image {
       margin-bottom: 15px;
       text-align: center;
 
       img {
         width: 100px;
+
+        @media (max-width: 1024px) {
+          width: 80px;
+        }
+
+        @media (max-width: 767px) {
+          width: 50px;
+        }
       }
     }
 
@@ -69,6 +87,15 @@ export default {
       font-size: 17px;
       font-weight: bold;
       text-align: center;
+
+      @media (max-width: 1024px) {
+        font-size: 15px;
+      }
+
+      @media (max-width: 767px) {
+        width: 120px;
+        font-size: 12px;
+      }
     }
   }
 }

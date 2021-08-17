@@ -14,7 +14,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .search-box {
   padding-top: 10px;
   padding-right: 30px;

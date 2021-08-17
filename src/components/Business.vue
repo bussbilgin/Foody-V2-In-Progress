@@ -1,16 +1,16 @@
 <template>
   <section class="container">
     <div class="business-card">
-      <h2>businesses</h2>
+      <h2>businesses near you</h2>
       <div class="business-items">
-        <div class="business">
+        <a href="#" class="business">
           <figure class="business__image">
             <img src="/photo.jpg" alt="Item Photo" />
           </figure>
           <div class="business__information">
             <p class="business__header">Eta Bal</p>
             <div class="business__review">
-              star
+              <star-rating>star</star-rating>&emsp;
               <p class="business__review-vote">Vote</p>
             </div>
             <p class="business__category">Bal</p>
@@ -18,16 +18,16 @@
               <p>Cafer Ağa Mahallesi</p>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="business">
+        <a href="#" class="business">
           <figure class="business__image">
             <img src="/photo.jpg" alt="Item Photo" />
           </figure>
           <div class="business__information">
             <p class="business__header">Eta Bal</p>
             <div class="business__review">
-              star
+              <star-rating>star</star-rating>&emsp;
               <p class="business__review-vote">Vote</p>
             </div>
             <p class="business__category">Bal</p>
@@ -35,16 +35,16 @@
               <p>Cafer Ağa Mahallesi</p>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="business">
+        <a href="#" class="business">
           <figure class="business__image">
             <img src="/photo.jpg" alt="Item Photo" />
           </figure>
           <div class="business__information">
             <p class="business__header">Eta Bal</p>
             <div class="business__review">
-              star
+              <star-rating>star</star-rating>&emsp;
               <p class="business__review-vote">Vote</p>
             </div>
             <p class="business__category">Bal</p>
@@ -52,7 +52,92 @@
               <p>Cafer Ağa Mahallesi</p>
             </div>
           </div>
-        </div>
+        </a>
+
+        <a href="#" class="business">
+          <figure class="business__image">
+            <img src="/photo.jpg" alt="Item Photo" />
+          </figure>
+          <div class="business__information">
+            <p class="business__header">Eta Bal</p>
+            <div class="business__review">
+              <star-rating>star</star-rating>&emsp;
+              <p class="business__review-vote">Vote</p>
+            </div>
+            <p class="business__category">Bal</p>
+            <div class="business__address">
+              <p>Cafer Ağa Mahallesi</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="business">
+          <figure class="business__image">
+            <img src="/photo.jpg" alt="Item Photo" />
+          </figure>
+          <div class="business__information">
+            <p class="business__header">Eta Bal</p>
+            <div class="business__review">
+              <star-rating>star</star-rating>&emsp;
+              <p class="business__review-vote">Vote</p>
+            </div>
+            <p class="business__category">Bal</p>
+            <div class="business__address">
+              <p>Cafer Ağa Mahallesi</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="business">
+          <figure class="business__image">
+            <img src="/photo.jpg" alt="Item Photo" />
+          </figure>
+          <div class="business__information">
+            <p class="business__header">Eta Bal</p>
+            <div class="business__review">
+              <star-rating>star</star-rating>&emsp;
+              <p class="business__review-vote">Vote</p>
+            </div>
+            <p class="business__category">Bal</p>
+            <div class="business__address">
+              <p>Cafer Ağa Mahallesi</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="business">
+          <figure class="business__image">
+            <img src="/photo.jpg" alt="Item Photo" />
+          </figure>
+          <div class="business__information">
+            <p class="business__header">Eta Bal</p>
+            <div class="business__review">
+              <star-rating>star</star-rating>&emsp;
+              <p class="business__review-vote">Vote</p>
+            </div>
+            <p class="business__category">Bal</p>
+            <div class="business__address">
+              <p>Cafer Ağa Mahallesi</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="business">
+          <figure class="business__image">
+            <img src="/photo.jpg" alt="Item Photo" />
+          </figure>
+          <div class="business__information">
+            <p class="business__header">Eta Bal</p>
+            <div class="business__review">
+              <star-rating>star</star-rating>&emsp;
+              <p class="business__review-vote">Vote</p>
+            </div>
+            <p class="business__category">Bal</p>
+            <div class="business__address">
+              <p>Cafer Ağa Mahallesi</p>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -65,63 +150,90 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.container {
+  margin-bottom: 40px;
+}
+
 .business-card {
   h2 {
     text-align: center;
     text-transform: uppercase;
+    padding: 10px;
     margin-bottom: 20px;
+    border-bottom: 2px solid #ff944d;
   }
 }
 
 .business-items {
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .business {
-  width: 300px;
+  max-width: 25%;
+  flex: 1 1 25%;
+  padding: 20px 15px;
+
+  @media (max-width: 1024px) {
+    max-width: 33%;
+    flex: 1 1 33%;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 50%;
+    flex: 1 1 50%;
+  }
 
   &__image {
-    width: 100%;
+    position: relative;
+    margin-bottom: 8px;
+    display: block;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1);
 
     img {
-      width: 300px;
-      border-radius: 8px;
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px 8px 0px 0px;
     }
   }
 
   &__information {
-    border-radius: 8px;
+    max-height: 120px;
+    border-radius: 0px 0px 8px 8px;
     background-color: #212121;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.3);
   }
 
   &__header {
-    font-size: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
     text-align: center;
+    margin-bottom: 8px;
     font-weight: bold;
-    margin-bottom: 10px;
     color: #ffffff;
   }
 
   &__review {
-    width: 150px;
-    font-size: 17px;
-    margin-bottom: 10px;
-    margin-right: 100px;
+    font-size: 14px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     color: #ffffff;
   }
 
   &__category {
-    font-size: 17px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 8px;
     color: #ffffff;
   }
 
   &__address {
-    font-size: 17px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 8px;
     color: #ffffff;
   }
 }

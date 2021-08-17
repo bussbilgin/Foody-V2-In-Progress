@@ -95,7 +95,6 @@ export default {
     align-items: center;
 
     .carousel-item {
-      background-color: #fff;
       margin-right: 15px;
 
       figure {
