@@ -114,11 +114,20 @@ export default {
   align-items: flex-end;
   // background-color: #191919;
 
+  @media (max-width: 767px) {
+    height: 420px;
+  }
+
   &__title {
     h5 {
       font-size: 14px;
       margin-bottom: 15px;
       color: #e7e7e7;
+
+      @media (max-width: 767px) {
+        font-size: 13px;
+        margin-bottom: 2px;
+      }
     }
 
     a {
@@ -131,10 +140,21 @@ export default {
     li {
       font-size: 13px;
       margin-bottom: 15px;
+
+      @media (max-width: 767px) {
+        margin-right: 15px;
+        margin-bottom: -10px;
+      }
     }
 
     a {
       color: #e7e7e7;
+    }
+  }
+
+  &__items ul {
+    @media (max-width: 767px) {
+      display: flex;
     }
   }
 
@@ -147,6 +167,13 @@ export default {
       display: flex;
       justify-content: space-around;
       align-items: flex-start;
+
+      @media (max-width: 767px) {
+        height: 300px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &__links,
@@ -176,10 +203,23 @@ export default {
       justify-content: space-between;
       align-items: center;
 
+      @media (max-width: 767px) {
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
       .copyright {
         margin-left: 10px;
         font-size: 13px;
         color: #e7e7e7;
+
+        @media (max-width: 767px) {
+          margin-left: -10px;
+          margin-bottom: 15px;
+        }
       }
 
       .social-content {

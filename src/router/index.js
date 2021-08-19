@@ -1,12 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import SearchResults from '../views/SearchResults.vue'
 import BusinesDetail from '../views/BusinesDetail.vue'
+
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+
+  {
+    path: '/search',
+    name: 'Search Results',
+    component: SearchResults
   },
 
   {

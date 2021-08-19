@@ -1,7 +1,7 @@
 <template>
   <div class="feature-card">
     <div class="container">
-      <a href="">
+      <router-link to="/search">
         <img class="feature__img" src="/img-sushi.jpeg" alt="Sushi Poster" />
         <div class="feature__detail">
           <h3>Sushi</h3>
@@ -9,7 +9,7 @@
             Give them your love, not your ideas!
           </p>
         </div>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
@@ -48,6 +48,18 @@ export default {};
       border-radius: 0 0 8px 8px;
       color: #ffffff;
       background-color: #00000099;
+
+      @media (max-width: 1024px) {
+        margin-right: 64px;
+        margin-left: 64px;
+        font-size: 15px;
+      }
+
+      @media (max-width: 767px) {
+        margin-right: 32px;
+        margin-left: 32px;
+        font-size: 14px;
+      }
     }
   }
 }

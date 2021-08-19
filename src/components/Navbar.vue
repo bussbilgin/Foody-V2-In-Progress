@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="container">
-      <a href=""><h2>FOODY</h2></a>
+      <router-link to="/" href=""><h2>FOODY</h2></router-link>
       <nav>
         <a href="">Home</a>
         <a href="">Foods</a>

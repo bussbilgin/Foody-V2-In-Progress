@@ -1,34 +1,17 @@
 <template>
   <Navbar />
-  <SearchBar />
-  <Jumbotron />
-  <Carousel />
-  <Business />
-  <BuyCards />
-  <Partners />
+  <router-view></router-view>
   <Footer />
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
-import SearchBar from "./components/SearchBar.vue";
-import Jumbotron from "./components/Jumbotron.vue";
-import Carousel from "./components/Carousel.vue";
-import Business from "./components/Business.vue";
-import BuyCards from "./components/BuyCards.vue";
-import Partners from "./components/Partners.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Navbar,
-    SearchBar,
-    Jumbotron,
-    Carousel,
-    Business,
-    BuyCards,
-    Partners,
     Footer,
   },
 };
@@ -47,7 +30,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #fafafa;
   // background-color: #e7e7e7;
-  margin-top: 110px;
+  margin-top: 130px;
 }
 
 .container {

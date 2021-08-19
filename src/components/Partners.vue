@@ -61,8 +61,28 @@ export default {
     color: #ffffff;
     background-color: #00000099;
 
+    @media (max-width: 1024px) {
+      margin-right: 65px;
+      margin-left: 65px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 767px) {
+      margin-right: 32px;
+      margin-left: 32px;
+      font-size: 12px;
+    }
+
     .partnerswrapper__link {
       margin-right: 20px;
+
+      @media (max-width: 1024px) {
+        margin-right: 25px;
+      }
+
+      @media (max-width: 767px) {
+        margin-right: 10px;
+      }
 
       button {
         width: 100%;
@@ -73,6 +93,14 @@ export default {
         cursor: pointer;
         color: #ffffff;
         background-color: black;
+
+        @media (max-width: 1024px) {
+          font-size: 15px;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 13px;
+        }
       }
     }
   }

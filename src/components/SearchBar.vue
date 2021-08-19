@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <form class="search-box">
+    <router-link to="/search" class="search-box">
       <input type="text" placeholder="What do you want to eat?" />
       <input type="text" placeholder="Where?" />
       <input type="submit" value="Search" />
-    </form>
+    </router-link>
   </div>
 </template>
 
@@ -15,6 +15,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.container {
+  margin-bottom: 20px;
+}
 .search-box {
   padding-top: 10px;
   padding-right: 30px;
@@ -39,6 +42,7 @@ export default {
   width: 100%;
   max-width: 1000px;
   font-size: 18px;
+  text-overflow: ellipsis;
   padding: 10px 16px;
   border-radius: 8px;
   transition: 0.4s;
@@ -59,6 +63,7 @@ export default {
   max-width: 100px;
   padding: 10px 16px;
   font-size: 18px;
+  text-overflow: ellipsis;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.4s;
