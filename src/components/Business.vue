@@ -1,9 +1,9 @@
 <template>
   <section class="container">
-    <div class="business-card">
+    <div class="business-cards">
       <h2>businesses near you</h2>
-      <div class="business-items">
-        <a href="#" class="business">
+      <div class="business-card">
+        <router-link to="/detail" href="#" class="business">
           <figure class="business__image">
             <img src="/photo.jpg" alt="Item Photo" />
           </figure>
@@ -11,133 +11,14 @@
             <p class="business__header">Eta Bal</p>
             <div class="business__review">
               <star-rating>star</star-rating>&emsp;
-              <p class="business__review-vote">Vote</p>
+              <p class="business__review-count">Review Count</p>
             </div>
             <p class="business__category">Bal</p>
             <div class="business__address">
               <p>Cafer Ağa Mahallesi</p>
             </div>
           </div>
-        </a>
-
-        <a href="#" class="business">
-          <figure class="business__image">
-            <img src="/photo.jpg" alt="Item Photo" />
-          </figure>
-          <div class="business__information">
-            <p class="business__header">Eta Bal</p>
-            <div class="business__review">
-              <star-rating>star</star-rating>&emsp;
-              <p class="business__review-vote">Vote</p>
-            </div>
-            <p class="business__category">Bal</p>
-            <div class="business__address">
-              <p>Cafer Ağa Mahallesi</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="business">
-          <figure class="business__image">
-            <img src="/photo.jpg" alt="Item Photo" />
-          </figure>
-          <div class="business__information">
-            <p class="business__header">Eta Bal</p>
-            <div class="business__review">
-              <star-rating>star</star-rating>&emsp;
-              <p class="business__review-vote">Vote</p>
-            </div>
-            <p class="business__category">Bal</p>
-            <div class="business__address">
-              <p>Cafer Ağa Mahallesi</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="business">
-          <figure class="business__image">
-            <img src="/photo.jpg" alt="Item Photo" />
-          </figure>
-          <div class="business__information">
-            <p class="business__header">Eta Bal</p>
-            <div class="business__review">
-              <star-rating>star</star-rating>&emsp;
-              <p class="business__review-vote">Vote</p>
-            </div>
-            <p class="business__category">Bal</p>
-            <div class="business__address">
-              <p>Cafer Ağa Mahallesi</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="business">
-          <figure class="business__image">
-            <img src="/photo.jpg" alt="Item Photo" />
-          </figure>
-          <div class="business__information">
-            <p class="business__header">Eta Bal</p>
-            <div class="business__review">
-              <star-rating>star</star-rating>&emsp;
-              <p class="business__review-vote">Vote</p>
-            </div>
-            <p class="business__category">Bal</p>
-            <div class="business__address">
-              <p>Cafer Ağa Mahallesi</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="business">
-          <figure class="business__image">
-            <img src="/photo.jpg" alt="Item Photo" />
-          </figure>
-          <div class="business__information">
-            <p class="business__header">Eta Bal</p>
-            <div class="business__review">
-              <star-rating>star</star-rating>&emsp;
-              <p class="business__review-vote">Vote</p>
-            </div>
-            <p class="business__category">Bal</p>
-            <div class="business__address">
-              <p>Cafer Ağa Mahallesi</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="business">
-          <figure class="business__image">
-            <img src="/photo.jpg" alt="Item Photo" />
-          </figure>
-          <div class="business__information">
-            <p class="business__header">Eta Bal</p>
-            <div class="business__review">
-              <star-rating>star</star-rating>&emsp;
-              <p class="business__review-vote">Vote</p>
-            </div>
-            <p class="business__category">Bal</p>
-            <div class="business__address">
-              <p>Cafer Ağa Mahallesi</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="business">
-          <figure class="business__image">
-            <img src="/photo.jpg" alt="Item Photo" />
-          </figure>
-          <div class="business__information">
-            <p class="business__header">Eta Bal</p>
-            <div class="business__review">
-              <star-rating>star</star-rating>&emsp;
-              <p class="business__review-vote">Vote</p>
-            </div>
-            <p class="business__category">Bal</p>
-            <div class="business__address">
-              <p>Cafer Ağa Mahallesi</p>
-            </div>
-          </div>
-        </a>
+        </router-link>
       </div>
     </div>
   </section>
@@ -154,7 +35,7 @@ export default {
   margin-bottom: 40px;
 }
 
-.business-card {
+.business-cards {
   h2 {
     text-align: center;
     text-transform: uppercase;
@@ -164,7 +45,7 @@ export default {
   }
 }
 
-.business-items {
+.business-card {
   display: flex;
   flex-wrap: wrap;
 }

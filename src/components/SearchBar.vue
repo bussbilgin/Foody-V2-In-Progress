@@ -1,16 +1,56 @@
 <template>
   <div class="container">
-    <router-link to="/search" class="search-box">
-      <input type="text" placeholder="What do you want to eat?" />
-      <input type="text" placeholder="Where?" />
+    <form @submit.prevent="Search()" class="search-box">
+      <input
+        type="text"
+        placeholder="What do you want to eat?"
+        v-model="term"
+      />
+      <input type="text" placeholder="Where?" v-model="location" />
       <input type="submit" value="Search" />
-    </router-link>
+    </form>
   </div>
 </template>
 
 <script>
+import { ref } from "@vue/reactivity";
+import env from "@/env.js";
+
 export default {
   name: "SearchBar",
+
+  setup() {
+    const term = ref("");
+    const location = ref("");
+    const searchResults = ref({});
+
+    const Search = () => {
+      if (term.value != "" && location.value != "") {
+        fetch(
+          `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term.value}&location=${location.value}&sort_by=best_match&locale=tr_TR`,
+          {
+            headers: {
+              Authorization: `Bearer ${env.apiKey}`,
+            },
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            searchResults.value = data;
+            console.log(searchResults.value);
+          });
+      } else {
+        alert("Arama yapmadan önce gerekli alanları doldurunuz.");
+      }
+    };
+
+    return {
+      term,
+      location,
+      Search,
+      searchResults,
+    };
+  },
 };
 </script>
 
@@ -48,6 +88,14 @@ export default {
   transition: 0.4s;
   color: #fff;
   background-color: #212121;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
 }
 
 .search-box input::placeholder {
@@ -69,6 +117,14 @@ export default {
   transition: 0.4s;
   color: #e7e7e7;
   background-color: #212121;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
 }
 .search-box input:active {
   background-color: #272727;

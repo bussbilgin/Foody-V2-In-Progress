@@ -1,12 +1,12 @@
 <template>
   <div class="carousel-wrapper">
     <div class="container">
-      <a href="" class="carousel-item">
+      <router-link to="/search" href="" class="carousel-item">
         <figure>
           <img src="/icon-meat.svg" alt="Meat Icon" />
         </figure>
         <span>meat</span>
-      </a>
+      </router-link>
       <a href="" class="carousel-item">
         <figure>
           <img src="/icon-chicken.svg" alt="Chicken Icon" />
@@ -118,6 +118,14 @@ export default {
         color: black;
         display: flex;
         justify-content: center;
+
+        @media (max-width: 1024px) {
+          font-size: 14px;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 13px;
+        }
       }
     }
   }

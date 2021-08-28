@@ -52,7 +52,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 header {
   width: 100%;
   position: fixed;
@@ -72,6 +72,14 @@ header {
     h2 {
       color: #ffffff;
       font-size: 32px;
+
+      @media (max-width: 1024px) {
+        font-size: 28px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 25px;
+      }
     }
 
     nav {
@@ -88,6 +96,10 @@ header {
       a {
         color: #ffffff;
         font-size: 20px;
+
+        @media (max-width: 1024px) {
+          font-size: 18px;
+        }
       }
     }
   }
